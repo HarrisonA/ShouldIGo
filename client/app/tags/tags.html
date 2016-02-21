@@ -1,0 +1,57 @@
+<div ng-app="myApp.tags"  class="container">   <!-- class added for bootstreap -->
+
+    <h1>Should I Go???</h1>
+    <p>(Enter a tag below and click enter)</p>
+      <br>
+        <form ng-submit="getPics(userInput)">  <!-- run this function on submit -->
+          <input type="text" ng-model="userInput" > <!-- pass the entered input above into our controller function -->
+
+          <br>
+          <!-- {{userInput}} -->
+        </form>
+
+        <button ng-click="getTags()">See previous tags  </button><!-- run this function on submit -->
+
+          <br>
+          <!-- Display all tags in the db and get their ig pics if the tag is clicked -->
+          <div class="tagArea">
+            <span ng-repeat="tag in tagsReturned">
+              <span ng-click="getPics(tag.text)">{{tag.text}}
+              </span>
+            </span>
+          </div>
+          <p>{{currentTag}}</p>
+
+        <!-- Print out each pic from teh API request -->
+        <!-- <p ng-repeat="pic in data"> -->
+
+          <!-- Bootstrapp addition -->
+
+              <!-- Pre bootstrap code -->
+<!--           <p ng-repeat="pic in data" style="float: left; font-size: 9pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+ --><!--             <img class="card-img-top" src ="{{pic.images.standard_resolution.url}}" style="float: left; width: 100%; height: 100%; margin-right: 1%; margin-bottom: 0.5em;">
+ -->
+          <div class ="container-fluid" >
+            <div class="row">
+              <div class="card col-sm-4" ng-repeat="pic in data">
+                <img class="card-img-top" src ="{{pic.images.standard_resolution.url}}">
+                <label class="card-text" ng-bind="formatDate({{pic.created_time}})">
+
+                </label>  <!-- convert time ... from StackOverflow... function added to controller -->
+              </div>
+            </div>
+
+        </div>
+        <!-- </p> -->
+        <!--
+        .thumbnail.url
+        .standard_resolution.url
+        .created_time
+        -->
+
+
+
+        <br><br>
+      </div>
+
+</div>

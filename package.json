@@ -1,0 +1,20 @@
+{
+  "name": "mvpproject",
+  "version": "1.0.0",
+  "description": "server and db packages that are needed",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sola",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.3.0",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "mongodb": "^2.1.4",
+    "mongoose": "^4.3.5",
+    "morgan": "^1.6.1"
+  }
+}
