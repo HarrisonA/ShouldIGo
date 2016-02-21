@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');  // ORM
-mongoose.connect('mongodb://lbnn:lbnn@ds011228.mongolab.com:11228/heroku_rtr7qlks');  //set the DB to be on localhouse server in the myApp
+mongoose.connect('mongodb://lbnn:lbnn@ds@ds031661.mongolab.com:31661/heroku_fn6b92h8');  //set the DB to be on localhouse server in the myApp
 
 var db = mongoose.connection;
 var Tag;
